@@ -12,9 +12,12 @@
     <meta property="og:type" content="website">
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <title>Neumont CSC210 - Introduction to Web Development and Presentation</title>
+    <title></title>
+    <link rel="stylesheet" href="slide_styles.css">
     <link rel="stylesheet" href="style.css">
 
-    <title>Neumont CSC210 - Introduction to Web Development and Presentation</title>
 </head>
 <body>
     <header role="banner">
@@ -28,49 +31,64 @@
     <nav role="navigation" aria-label="Main navigation">
         <div class = "container">
             <ul>
-                <li><a href= "#about" aria-describedby="about-desc">About me</a></li>
-                <li><a href= "#skills" aria-describedby="skills-desc"> My Skills</a></li>
-                <li><a href= "#projects" aria-describedby="projects-desc">Amazing Projects</a></li>
-                <li><a href= "#contact" aria-describedby="contact-desc">Contact Me!</a></li>
+                <li><a href= "about.html" aria-describedby="about-desc">About me</a></li>
+                <li><a href= "MySkills.html" aria-describedby="skills-desc"> My Skills</a></li>
+                <li><a href= "projects.html" aria-describedby="projects-desc">Amazing Projects</a></li>
+                <li><a href= "contact.html" aria-describedby="contact-desc">Contact Me!</a></li>
             </ul>
         </div>
     </nav>
-        <main id="main-content" role="main">
-            <div class="container">
-
-                <section id="about" aria-labelledby="about-heading">
-                    <h2 id="about-heading">About Me</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p>Just an idiot</p>
-
-                            <details>
-                                <summary>Class Journey</summary>
-                                <p>First time using HTML</p>
-                            </details>
-                        </div>
-
-                        <aside class="interests" aria-labelledby="interests-heading">
-                            <h3 id="interests-heading">Interests</h3>
-                            <ul>
-                                <li>
-                                    <span role="img" aria-label="gaming">🎮</span>
-                                    Gaming(Terraria, Minecraft, Peak, Hollow Knight, etc.)
-                                </li>
-                                <li>
-                                    <span role="img" aria-label="Art">🎨</span>
-                                    Art(Sketches and digital art)
-                                </li>
-                                <li>
-                                    <span role="img" aria-lab🎶="Music">🎶</span>
-                                    Music(Electronic, Glitch hop, Rock)
-                                </li>
-                            </ul>
-                        </aside>
-                    </div>
-                </section>
-            </div>
-        </main>
+     
 <script src="main.js"></script>
-</body>
+<div class="container">
+        
+        
+        <!-- Big Slideshow -->
+        <!-- delay 8 secs transition time 0.4 secs-->
+        <div id="slides" class="ms-slides" data-delay="8000" data-transition="400">
+          <!-- Define the Slide Show Elements -->
+          <div class="ms-slides__inner">
+            <img src="images/Bloodflare.jpg" width="1000" height="400" alt="Lily-In-Robe">
+            <img src="images/AngerAndMalice.jpg" width="1000" height="400" alt="Mad-Bunn">
+            <img src="images/SWYSC.jpg" width="1000" height="400" alt="Cycle4">
+            <img src="images/Ree-design.png" width="1000" height="400" alt="Reena">
+          </div>
+
+          <!-- Show Indicators -->
+          <ol class="ms-slides__indicators">
+            <!-- slide indicators -->
+          </ol>
+
+          <!-- Show Next and Previous Buttons -->
+          <a href="#" class="ms-slides__next-button"></a>
+          <a href="#" class="ms-slides__prev-button"></a>
+        </div>
+        <!-- Big Slideshow -->
+
+
+        <script src="slides.js"></script>
+        <script>
+            // Other code 
+        </script>
+
+</div>
+<main>
+    <p>My Art</p>
+</main>
+
+<script type="text/javascript">
+
+  const api_url ="https://zenquotes.io/api/quotes/";
+
+  async function getapi(url)
+  {
+    const response = await fetch(url);
+    var data = await response.json();
+    console.log(data);
+  }
+
+  getapi(api_url);
+
+</script>
+
 </html>
